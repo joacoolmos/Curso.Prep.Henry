@@ -10,7 +10,16 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-}
+  var objeto = {
+    A: 1,
+    B: 2,
+    C: 3,
+  }
+  let arreglodeobjeto = Objetc.entries(objeto);
+  console.log("objeto como arreglo: ", arreglodeobjeto);
+    }
+
+
 
 
 function numberOfCharacters(string) {
@@ -43,6 +52,16 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  var numero = String(numero)
+  for(i = 0 , j = numero.length() - 1; i <= j ; i++ , --j ){
+    if(numero(i) === numero(j)){
+      return "Es capicua"
+    }
+    else{
+      return "No es capicua"
+    }
+  }
+
 }
 
 
@@ -50,7 +69,13 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-}
+  var nuevocadena = [];
+  for(let i = 0; i < cadena.length; i++){
+    if(cadena[i].length === "a" || cadena[i].length === "b" || cadena[i].length === "c" ){
+      return cadena - "a" || cadena - "b" || cadena - "c"
+    }
+  }
+ }
 
 
 function sortArray(arr) {
