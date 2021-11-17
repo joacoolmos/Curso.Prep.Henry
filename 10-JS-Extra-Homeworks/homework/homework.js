@@ -21,22 +21,17 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-let arr = string.split()
-arr.sort()
-let letras = [];
-let vecesrepetidas = [];
-let contador = 1;
+let resultado = {}
 
-for(let i = 0; i < arr.length;i++){
-  if(arr[i+1] === arr[i]){
-contador++
+for (let i = 0; i < string.length; i++) {
+  let letra = string[i];
+  if(Object.keys(resultado).indexOf(letra) < 0){
+    resultado[letra] = 1;
   }else{
-    letras.push(arr[i])
-    vecesrepetidas.push(contador)
-    contador = 1
+    resultado[letra]++
   }
 }
-//convertir los 2 arrays ('letras' y 'vecesrepetidas') en un formato clave-valor
+return resultado
 }
 
 
